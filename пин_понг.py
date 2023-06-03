@@ -29,6 +29,23 @@ class Player(GameSprite):
             self.rect.y += self.speed
 
 clock = time.Clock()
+
+
+game = True
+finish = False
+
+speed_x = 3
+speed_y = 3
+
+rocket1 = Player('меч.png', 20, 250, 5, 90, 200)
+rocket2 = Player('меч.png', 40, 250, 5, 90, 200)
+ball = Player('Red-Shining-Apple-PNG-transformed.png', 250, 250, 5, 50, 50)
+
+font.init()
+font = font.Font(None, 50)
+lose = font.render('1 игрок проиграл!', True, (150, 0, 0))
+lose2 = font.render('2 игрок проиграл!', True, (150, 0, 0))
+
 display.update()
 clock.tick(60)
 
